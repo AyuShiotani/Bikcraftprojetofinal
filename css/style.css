@@ -1,5 +1,24 @@
-@import "./global/header.css";
+/* Global */
 @import "./global/global.css";
-@import "./home/main.css";
+@import "./global/header.css";
+@import "./global/footer.css";
 
-/* MAIN */
+/* Body */
+@import "./home/main.css";
+@import "./bicicletas/bicicletas-lista.css";
+@import "./home/tecnologia.css";
+@import "./home/parceiros.css";
+@import "./home/depoimento.css";
+
+/* Utilidades */
+@import "./utilidade/componentes.css";
+@import "./utilidade/tipografia.css";
+@import "./utilidade/cores.css";
+@import "./utilidade/formulario.css";
+
+/* SITES INTERNOS */
+@import "./siteinterno/termos.css";
+@import "./siteinterno/bicicletas.css";
+@import "./siteinterno/seguros.css";
+@import "./siteinterno/contato.css";
+@import "./orcamento/orcamento.css";

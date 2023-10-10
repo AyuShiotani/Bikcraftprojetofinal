@@ -1,0 +1,80 @@
+.bicicletas-bg {
+  background: linear-gradient(to right, var(--cor-0) 30%, var(--cor-11) 0%);
+}
+
+.bicicletas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.bicicletas-imagem {
+  display: grid;
+}
+.bicicletas-imagem span {
+  background-color: var(--cor-12);
+  padding: 8px 16px 8px 16px;
+  display: inline-block;
+  grid-area: 1/1;
+  margin-top: 20px;
+  place-self: start end;
+  border-radius: 5px 0px 0px 5px;
+}
+.bicicletas-imagem img {
+  grid-area: 1/1;
+}
+
+.bicicletas-conteudo {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-content: start;
+}
+
+.bicicletas-conteudo h2,
+p {
+  grid-column: 1/-1;
+}
+
+.bicicletas h2 {
+  margin-bottom: 20px;
+}
+
+.bicicletas p {
+  margin-bottom: 32px;
+}
+
+.bicicletas a {
+  place-self: end;
+}
+.bicicletas ul {
+  padding: 0%;
+}
+
+.bicicletas li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* COLOCANDO SETA NO A */
+.botao.seta::after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 10px;
+  margin-left: 12px;
+  background: url("../../img/icones/seta.svg");
+}
+.botao.seta:hover::after {
+  transform: translateX(4px);
+}
+
+@media (max-width: 800px) {
+  .bicicletas {
+    grid-template-columns: 1fr;
+  }
+  .bicicletas-bg {
+    background: var(--cor-11);
+  }
+}

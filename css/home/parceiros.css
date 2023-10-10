@@ -1,0 +1,54 @@
+.parceiros {
+  padding-top: 60px;
+  padding-bottom: 120px;
+}
+
+.parceiros h2 {
+  padding-bottom: 60px;
+}
+
+.parceiros ul {
+  padding: 0 20px;
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 auto;
+  list-style: none;
+}
+
+.parceiros li {
+  padding: 32px;
+  display: flex;
+  /* Aqui definiu que so teria borda na esquerda */
+  border-left: 2px solid var(--cor-2);
+}
+
+/* Par tirar a borda lateral esquerda dos parceiros [primeiro filho e o quinto ficarao sem borda] */
+.parceiros li:first-child,
+.parceiros li:nth-child(5) {
+  border-left: none;
+}
+/* todos a partir do 5 filho [n+5] terao borda top */
+.parceiros li:nth-child(n + 5) {
+  border-top: 2px solid var(--cor-2);
+}
+
+@media (max-width: 800px) {
+  .parceiros {
+    padding-bottom: 60px;
+  }
+
+  .parceiros h2 {
+    padding-bottom: 35px;
+  }
+  .parceiros ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .parceiros li {
+    border: 2px solid var(--cor-2);
+  }
+  .parceiros li:first-child,
+  .parceiros li:nth-child(5) {
+    border-left: 2px solid var(--cor-2);
+  }
+}
